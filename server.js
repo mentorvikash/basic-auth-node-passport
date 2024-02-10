@@ -1,6 +1,7 @@
 const express = require("express");
 const passport = require("passport");
 const session = require("express-session")
+const flash = require('connect-flash');
 const LocalStrategy = require("passport-local").Strategy;
 require('dotenv').config()
 const app = express();
@@ -11,6 +12,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(session({ secret: "myseceratekey", resave: false, saveUninitialized: false }))
 app.use(passport.initialize())
 app.use(passport.session())
+app.use(flash());
 // set a public folder
 app.use(express.static("/public"))
 // set view engine
@@ -53,3 +55,4 @@ app.listen(port, () => {
 
 // next we have to install all requrired packages
 // its time to check if server is running
+// Next we going to check our routes working

@@ -4,23 +4,24 @@ const passport = require("passport")
 const router = express.Router()
 
 router.get("/login", (req, res, next) => {
-    return res.send("login page")
+    return res.render("users/login")
 })
 
 // login route
 router.post("/login", passport.authenticate("local", {
     successRedirect: "/",
     failureRedirect: "/users/login",
-    failureFlash: true,
+    // failureFlash: true,
 }))
 
 // new registration page
 router.get("/register", (req, res) => {
-    return res.send("registration page")
+    return res.render("users/register")
 })
 
 // create registration page
 router.post("/register", (req, res) => {
+    console.log("body", req.body)
     return res.send("you sucessfully register new user")
 })
 
