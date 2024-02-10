@@ -1,0 +1,22 @@
+{
+  "name": "basic-auth",
+  "version": "1.0.0",
+  "description": "1. First create an express node.js app 2. Create a route for auhentication for login 3. Create middleware to check if user exist or not if yes then only allow. 4. If possilbe add jwt authentication 5. Test the flow with postman",
+  "main": "server.js",
+  "scripts": {
+    "start": "node --watch server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.1",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-session": "^1.18.0",
+    "passport": "^0.7.0",
+    "passport-local": "^1.0.0"
+  }
+}
